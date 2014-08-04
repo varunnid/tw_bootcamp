@@ -1,21 +1,20 @@
 package com.tw.bootcamp;
 
-/**
- * Created by varunnidhi on 8/4/14.
- */
 public class FizzBuzz {
+    public enum FizzBuzzResults {
+        Fizz, Buzz, FizzBuzz, Unknown
+    }
 
-
-    public String play(int number) {
+    public FizzBuzzResults play(int number) {
         if(number % 15 == 0) {
-            return "FizzBuzz";
+            return FizzBuzzResults.FizzBuzz;
         }
         if (number % 3 == 0) {
-            return "Fizz";
+            return FizzBuzzResults.Fizz;
         }
         if (number % 5 == 0) {
-            return "Buzz";
+            return FizzBuzzResults.Buzz;
         }
-        return String.valueOf(number);
+        return FizzBuzzResults.Unknown;
     }
 }

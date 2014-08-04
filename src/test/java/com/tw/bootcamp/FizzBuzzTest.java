@@ -3,7 +3,8 @@ package com.tw.bootcamp;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static com.tw.bootcamp.FizzBuzz.FizzBuzzResults;
+import static org.junit.Assert.assertEquals;
 
 public class FizzBuzzTest {
 
@@ -17,21 +18,21 @@ public class FizzBuzzTest {
 
     @Test
     public void shouldPrintNumberIfNotFizzBuzz() {
-        assertEquals("1", fizzBuzz.play(1));
+        assertEquals(FizzBuzzResults.Unknown, fizzBuzz.play(1));
     }
 
     @Test
     public void shouldPrintFizzIfDivisibleByThree() {
-        assertEquals("Fizz", fizzBuzz.play(3));
+        assertEquals(FizzBuzzResults.Fizz, fizzBuzz.play(3));
     }
 
     @Test
     public void shouldPrintBuzzIfDivisibleByFive(){
-        assertEquals("Buzz", fizzBuzz.play(5));
+        assertEquals(FizzBuzzResults.Buzz, fizzBuzz.play(5));
     }
 
     @Test
     public void shouldPrintFizzBuzzIfDivisibleByFifteen() {
-        assertEquals("FizzBuzz", fizzBuzz.play(15));
+        assertEquals(FizzBuzzResults.FizzBuzz, fizzBuzz.play(15));
     }
 }
