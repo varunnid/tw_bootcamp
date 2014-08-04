@@ -22,4 +22,10 @@ public class RectangleTest {
         Rectangle rect = new Rectangle(6,2);
         assertEquals(12, rect.calcArea(), 0);
     }
+
+    @Test
+    public void shouldCalculatePerimeter(){
+        Rectangle rect = new Rectangle(3,5);
+        assertEquals(16, rect.calcPerimeter(), 0);
+    }
 }

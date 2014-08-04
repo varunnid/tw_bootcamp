@@ -26,4 +26,8 @@ public class Rectangle {
     public double calcArea() {
         return length * breadth;
     }
+
+    public double calcPerimeter() {
+        return (2 * length) + (2 * breadth);
+    }
 }
