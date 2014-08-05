@@ -5,7 +5,7 @@ package com.tw.bootcamp.akshay_jitendra;
  */
 public class Probability {
 
-    private float value;
+    private final float value;
 
     public Probability(float value) {
         this.value = value;
@@ -42,7 +42,8 @@ public class Probability {
     }
 
     public Probability or(Probability other) {
-        return new Probability(this.value+other.value
-                -(this.and(other)).value);
+//        return new Probability(this.value+other.value
+//                -(this.and(other)).value);
+        return this.inverse().and(other.inverse()).inverse();
     }
 }
