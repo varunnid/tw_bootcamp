@@ -9,6 +9,8 @@ public class Unit {
     private String name;
     private Double conversionRatio;
 
+    public static final Object LENGTH = new Object();
+
     public static final Unit inch = new Unit("LENGTH", "INCH", 1d);
     public static final Unit feet = new Unit("LENGTH", "FEET", 12d);
     public static final Unit yard = new Unit("LENGTH", "YARD", 1200d);
@@ -27,7 +29,7 @@ public class Unit {
     }
 
     public boolean canConvert(Unit unit) {
-        return this.type == unit.type;
+        return this.type.equals(unit.type);
     }
 
 }
